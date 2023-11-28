@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Sunset Friends & Events</title>
+</head>
+
+<body>
+  <!-- might need to remove some ids, or change them to classes -->
+  <!-- logo zoom out and in for desktop -->
+  <!-- make sure all appropriate class names used -->
+  <header class="header container flex">
+    <div class="logo flex">
+      <a class="logo__link" href="#"><i class="icon icon--logo ph ph-sun-horizon"></i></a>
+      <h1 class="heading--primary">Sunset Friends <span class="heading--small">&amp; Events</span></h1>
+    </div>
+    <nav class="main-nav">
+      <ul class="main-nav__links flex list-style">
+        <li><a class="main-nav__link" href="./about.html">About</a></li>
+        <li><a class="main-nav__link" href="./volunteer.html">Volunteer</a></li>
+        <li><a class="main-nav__link" href="./contact.html">Contact</a></li>
+        <li><a class="main-nav__link main-nav--cta" href="./events.html">Events</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-nav__btn">
+      <i class="icon icon--mobile-nav ph ph-list" name="menu-outline"></i>
+      <i class="icon icon--mobile-nav ph ph-x" name="close-outline"></i>
+    </button>
+  </header>
+  <main>
+    <section class="hero__section container grid">
+      <div class="hero__section--info">
+        <h2 class="section__title">Embrace your sunset years:</h2>
+        <h3 class="section__subtitle hero__subtitle">There's still plenty more to see and do!</h3>
+        <p class="hero__text">Here at Sunset Friends there's always a friend just round the corner ready to meet you.
+        </p>
+        <p class="hero__text">You'll be amazed at all the things we get up to!</p>
+        <a class="hero--cta" href="./events.html">Come join us!</a>
+        <a class="hero--learn-more" href="#what-we-do">Learn more ↓</a>
+      </div>
+      <div class="flex">
+        <img class="hero__img" src="./img/man-amazed-peering-around-corner.jpg"
+          alt="older man peering around corner looking amazed">
+      </div>
+    </section>
+    <section class="local__section container flex">
+      <i class="icon ph ph-map-pin-line"></i>
+      <p>Your local community hub, where you will find support and companionship to accompany you throughout your sunset
+        years.</p>
+    </section>
+    <section class="features__section container grid grid--3-columns" id="what-we-do">
+      <div class="feature--group">
+        <img class="feature__img" src="./img/women-on-couch-taking-selfie.jpg"
+          alt="senior women sitting on couch smiling taking a selfie picture with phone">
+        <div class="features__subtitle flex">
+          <i class="icon ph ph-hand-heart"></i>
+          <h3 class="section__subtitle feature__subtitle">Make friends</h3>
+        </div>
+        <p class="feature__text">We're a friendly bunch, so come join us for a chat and a cup of tea, as we share
+          laughter and companionship together.</p>
+      </div>
+      <div class="feature--group">
+        <img class="feature__img" src="./img/woman-doing-yoga.jpg" alt="older woman sitting in yoga pose">
+        <div class="features__subtitle flex">
+          <i class="icon ph ph-person-simple-walk"></i>
+          <h3 class="section__subtitle feature__subtitle">Stay active</h3>
+        </div>
+        <p class="feature__text">We offer a variety of activities from yoga to chess, walking football to knitting.
+          We've got something for everyone!</p>
+      </div>
+      <div class="feature--group">
+        <img class="feature__img" src="./img/senior-man-walking-in-town-sightseeing.jpg"
+          alt="senior man walking in town sightseeing">
+        <div class="features__subtitle flex">
+          <i class="icon ph ph-van"></i>
+          <h3 class="section__subtitle feature__subtitle">Go on trips</h3>
+        </div>
+        <p class="feature__text">Each month we go exploring and have great adventures. Join us on our
+          memorable outings to fun destinations.</p>
+      </div>
+    </section>
+    <!-- testimonial revolving section -->
+    <section class="container" id="section--testimonials">
+      <h2 class="section__title section__title--testimonials">Connecting people and creating memories at sunset friends
+      </h2>
+      <div class="slider">
+        <div class="slide slide--1">
+          <div class="testimonial">
+            <h3 class="testimonial__heading">Making lifelong connections</h3>
+            <blockquote class="testimonial__text">
+              Sunset Friends has been a beacon of warmth for me. I joined looking for companionship and have found
+              beautiful friendships that have added so much joy to my life.
+            </blockquote>
+            <h4 class="testimonial__author">Fiona</h4>
+          </div>
+        </div>
+        <div class="slide slide--2">
+          <div class="testimonial">
+            <h3 class="testimonial__heading">Volunteering in the café</h3>
+            <blockquote class="testimonial__text">
+              Being a part of the Sunset Friends family as a cafe volunteer has been incredibly fulfilling. The
+              camaraderie and shared moments over a cup of tea make every day special.
+            </blockquote>
+            <h4 class="testimonial__author">Sam</h4>
+          </div>
+        </div>
+        <div class="slide slide--3">
+          <div class="testimonial">
+            <h3 class="testimonial__heading">Active living, laughter, and a vibrant community</h3>
+            <blockquote class="testimonial__text">
+              I can't speak highly enough of Sunset Friends and all the activities they offer. It helps keep my mind and
+              body active and I particularly enjoy playing walking football. We always have a good laugh.
+            </blockquote>
+            <h4 class="testimonial__author">John</h4>
+          </div>
+        </div>
+        <div class="slide slide--4">
+          <div class="testimonial">
+            <h3 class="testimonial__heading">Bringing the sunshine indoors as a "Sunset Buddy"</h3>
+            <blockquote class="testimonial__text">
+              As a "Sunset Buddy", I've found immense gratification in brightening the days of those who can't join in
+              person. Bringing the spirit of Sunset Friends to homes has created heartwarming connections and
+              friendships I will treasure forever.
+            </blockquote>
+            <h4 class="testimonial__author">Sarah</h4>
+          </div>
+        </div>
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+    <section class="container">
+      <p class="section--cta"><a href="./events.html">Come join us!</a></p>
+    </section>
+  </main>
+  <footer class="footer container">
+    <div class="secondary-nav">
+      <ul class="flex flex--column list-style">
+        <li><a class="secondary-nav__link" href="./about.html">About</a></li>
+        <li><a class="secondary-nav__link" href="./volunteer.html">Volunteer</a></li>
+        <li><a class="secondary-nav__link" href="./contact.html">Contact</a></li>
+        <li><a class="secondary-nav__link" href="./events.html">Events</a></li>
+      </ul>
+      <ul class="flex flex--column list-style">
+        <li><a class="secondary-nav__link" href="#">Terms of Use</a></li>
+        <li><a class="secondary-nav__link" href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="newsletter__form">
+      <h2 class="newsletter__title">Get information about our upcoming events</h2>
+      <p class="newsletter__text">Stay informed about what Sunshine Friends are up to. TODO: Add some more text.</p>
+      <form class="newsletter__form--cta" name="sign-up" netlify>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane" required />
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="jane@example.com" required />
+        </div>
+        <div>
+          <label for="select-where">Where did you hear about us</label>
+          <select id="select-where" name="select-where" required>
+            <option value="">Please choose one option:</option>
+            <option value="friends">Friends and family</option>
+            <option value="search">Search engine</option>
+            <option value="social">Social media</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button class="btn btn--form">Sign up now</button>
+      </form>
+    </div>
+    <p class="copyright">&copy; Copyright Sunset Friends & Events <span class="copyright--year">2023</span> - Website
+      designed by <a href="https://github.com/VTickner">V. Tickner</a>.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
