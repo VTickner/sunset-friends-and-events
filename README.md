@@ -51,9 +51,11 @@ Mobile:
   - Added mobile navigation menu. TODO: adjust look of menu
   - Added carousel for testimonials.
 - Added accessibility aria labels for the carousel section: `role`, `aria-roledescription`, `arial-label`, `aria-labelledby`.
+- Added social image icons to footer.
 
 TODO
 
+- create functioning newsletter form
 - add media queries to make site fully responsive
 - refactor CSS
 

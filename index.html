@@ -10,9 +10,6 @@
 </head>
 
 <body>
-  <!-- might need to remove some ids, or change them to classes -->
-  <!-- logo zoom out and in for desktop -->
-  <!-- make sure all appropriate class names used -->
   <header class="header container flex">
     <div class="logo flex">
       <a class="logo__link" href="#"><i class="icon icon--logo ph ph-sun-horizon"></i></a>
@@ -185,45 +182,61 @@
     </section>
   </main>
   <footer class="footer container">
-    <div class="secondary-nav">
-      <ul class="flex flex--column list-style">
-        <li><a class="secondary-nav__link" href="#">About</a></li>
-        <li><a class="secondary-nav__link" href="#">Volunteer</a></li>
-        <li><a class="secondary-nav__link" href="#">Contact</a></li>
-        <li><a class="secondary-nav__link" href="#">Events</a></li>
-      </ul>
-      <ul class="flex flex--column list-style">
-        <li><a class="secondary-nav__link" href="#">Terms of Use</a></li>
-        <li><a class="secondary-nav__link" href="#">Privacy Policy</a></li>
-      </ul>
+    <div class="footer--info grid">
+      <div class="secondary-nav flex">
+        <ul class="secondary-nav__links flex flex--column list-style">
+          <li><a class="secondary-nav__link" href="#" title="About Sunset Friends">About</a></li>
+          <li><a class="secondary-nav__link" href="#" title="Volunteer with Sunset Friends">Volunteer</a></li>
+          <li><a class="secondary-nav__link" href="#" title="Contact Us">Contact</a></li>
+          <li><a class="secondary-nav__link" href="#" title="Come Join Us">Events</a></li>
+        </ul>
+        <ul class="secondary-nav__links flex flex--column list-style">
+          <li><a class="secondary-nav__link" href="#" title="Terms &amp; Conditions">Terms of Use</a></li>
+          <li><a class="secondary-nav__link" href="#" title="Privacy Policy">Privacy Policy</a></li>
+        </ul>
+        <ul class="secondary-nav__links secondary-nav__links--social flex list-style">
+          <li><a class="secondary-nav__link social__link flex" href="#" title="Connect on Facebook"><i
+                class="icon ph ph-facebook-logo"></i></a></li>
+          <li><a class="secondary-nav__link social__link flex" href="#" title="Connect on Instagram"><i
+                class="icon ph ph-instagram-logo"></i></a></li>
+          <li><a class="secondary-nav__link social__link flex" href="#" title="Connect on Twitter"><i
+                class="icon ph ph-twitter-logo"></i></a></li>
+          <li><a class="secondary-nav__link social__link flex" href="#" title="Connect on WhatsApp"><i
+                class="icon ph ph-whatsapp-logo"></i></a></li>
+        </ul>
+      </div>
+      <div class="newsletter__form">
+        <h2 class="newsletter__title">Get information about our upcoming events</h2>
+        <p class="newsletter__text">Stay informed about what Sunset Friends are up to. TODO: Add some more text.</p>
+        <form class="newsletter__form--cta" name="sign-up" netlify>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane" required />
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="jane@example.com" required />
+          </div>
+          <div>
+            <label for="select-where">Where did you hear about us</label>
+            <select id="select-where" name="select-where" required>
+              <option value="">Please choose one option:</option>
+              <option value="friends">Friends and family</option>
+              <option value="search">Search engine</option>
+              <option value="social">Social media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button class="btn btn--form">Sign up now</button>
+        </form>
+      </div>
     </div>
-    <div class="newsletter__form">
-      <h2 class="newsletter__title">Get information about our upcoming events</h2>
-      <p class="newsletter__text">Stay informed about what Sunset Friends are up to. TODO: Add some more text.</p>
-      <form class="newsletter__form--cta" name="sign-up" netlify>
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Jane" required />
-        </div>
-        <div>
-          <label for="email">Email address</label>
-          <input id="email" name="email" type="email" placeholder="jane@example.com" required />
-        </div>
-        <div>
-          <label for="select-where">Where did you hear about us</label>
-          <select id="select-where" name="select-where" required>
-            <option value="">Please choose one option:</option>
-            <option value="friends">Friends and family</option>
-            <option value="search">Search engine</option>
-            <option value="social">Social media</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <button class="btn btn--form">Sign up now</button>
-      </form>
+    <div class="copyright--info flex">
+      <a class="logo__link" href="#"><i class="icon icon--logo-sm ph ph-sun-horizon"></i></a>
+      <p class="copyright">&copy; Copyright Sunset Friends & Events <span class="copyright--year">2023</span> - Website
+        designed by <a href="https://github.com/VTickner">V. Tickner</a>.</p>
+      </p>
     </div>
-    <p class="copyright">&copy; Copyright Sunset Friends & Events <span class="copyright--year">2023</span> - Website
-      designed by <a href="https://github.com/VTickner">V. Tickner</a>.</p>
   </footer>
   <script src="script.js"></script>
 </body>
