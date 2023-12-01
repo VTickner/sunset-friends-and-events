@@ -20,10 +20,10 @@
     </div>
     <nav class="main-nav">
       <ul class="main-nav__links flex list-style">
-        <li><a class="main-nav__link" href="./about.html">About</a></li>
-        <li><a class="main-nav__link" href="./volunteer.html">Volunteer</a></li>
-        <li><a class="main-nav__link" href="./contact.html">Contact</a></li>
-        <li><a class="main-nav__link main-nav--cta" href="./events.html">Events</a></li>
+        <li><a class="main-nav__link" href="#">About</a></li>
+        <li><a class="main-nav__link" href="#">Volunteer</a></li>
+        <li><a class="main-nav__link" href="#">Contact</a></li>
+        <li><a class="main-nav__link main-nav--cta" href="#">Events</a></li>
       </ul>
     </nav>
     <button class="mobile-nav__btn">
@@ -32,14 +32,14 @@
     </button>
   </header>
   <main>
-    <section class="hero__section container grid">
+    <section class="hero__section container grid margin--large">
       <div class="hero__section--info">
         <h2 class="section__title">Embrace your sunset years:</h2>
         <h3 class="section__subtitle hero__subtitle">There's still plenty more to see and do!</h3>
         <p class="hero__text">Here at Sunset Friends there's always a friend just round the corner ready to meet you.
         </p>
         <p class="hero__text">You'll be amazed at all the things we get up to!</p>
-        <a class="hero--cta" href="./events.html">Come join us!</a>
+        <a class="cta hero--cta" href="./events.html">Come join us!</a>
         <a class="hero--learn-more" href="#what-we-do">Learn more ↓</a>
       </div>
       <div class="flex">
@@ -47,12 +47,12 @@
           alt="older man peering around corner looking amazed">
       </div>
     </section>
-    <section class="local__section container flex">
+    <section class="local__section container flex margin--large">
       <i class="icon ph ph-map-pin-line"></i>
       <p>Your local community hub, where you will find support and companionship to accompany you throughout your sunset
         years.</p>
     </section>
-    <section class="features__section container grid grid--3-columns" id="what-we-do">
+    <section class="features__section container grid grid--3-columns margin--large" id="what-we-do">
       <div class="feature--group">
         <img class="feature__img" src="./img/women-on-couch-taking-selfie.jpg"
           alt="senior women sitting on couch smiling taking a selfie picture with phone">
@@ -61,7 +61,7 @@
           <h3 class="section__subtitle feature__subtitle">Make friends</h3>
         </div>
         <p class="feature__text">We're a friendly bunch, so come join us for a chat and a cup of tea, as we share
-          laughter and companionship together.</p>
+          companionship and laughter together.</p>
       </div>
       <div class="feature--group">
         <img class="feature__img" src="./img/woman-doing-yoga.jpg" alt="older woman sitting in yoga pose">
@@ -83,68 +83,114 @@
           memorable outings to fun destinations.</p>
       </div>
     </section>
-    <!-- testimonial revolving section -->
-    <section class="container" id="section--testimonials">
-      <h2 class="section__title section__title--testimonials">Connecting people and creating memories at sunset friends
+    <section class="container testimonials__section margin--large">
+      <h2 class="section__title testimonials__title">Sunset Friends in Their Own Words: Stories &amp; Thoughts Shared by
+        Our Community
       </h2>
-      <div class="slider">
-        <div class="slide slide--1">
-          <div class="testimonial">
-            <h3 class="testimonial__heading">Making lifelong connections</h3>
-            <blockquote class="testimonial__text">
-              Sunset Friends has been a beacon of warmth for me. I joined looking for companionship and have found
-              beautiful friendships that have added so much joy to my life.
-            </blockquote>
-            <h4 class="testimonial__author">Fiona</h4>
+      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Testimonials">
+        <div role="group" aria-label="Carousel controls">
+          <button class="carousel__btn carousel__btn--left" aria-label="Previous slide">
+            <i class="icon ph ph-caret-left"></i>
+          </button>
+          <button class="carousel__btn carousel__btn--right" aria-label="Next slide">
+            <i class="icon ph ph-caret-right"></i>
+          </button>
+          <div class="dots flex">
+            <button class="dots__dot dots__dot--active" data-slide="0"></button>
+            <button class="dots__dot" data-slide="1"></button>
+            <button class="dots__dot" data-slide="2"></button>
+            <button class="dots__dot" data-slide="3"></button>
           </div>
         </div>
-        <div class="slide slide--2">
-          <div class="testimonial">
-            <h3 class="testimonial__heading">Volunteering in the café</h3>
+        <div class="slide slide--1 flex flex--column" role="group" aria-roledescription="slide"
+          aria-label="Volunteering testimonial" aria-labelledby="testimonial__heading--1">
+          <div class="testimonial flex flex--column">
+            <div class="testimonial--heading flex">
+              <i class="icon ph ph-coffee"></i>
+              <h3 class="section__subtitle testimonial__subtitle" id="testimonial__heading--1">Volunteering in the café
+              </h3>
+            </div>
             <blockquote class="testimonial__text">
-              Being a part of the Sunset Friends family as a cafe volunteer has been incredibly fulfilling. The
-              camaraderie and shared moments over a cup of tea make every day special.
+              "Being a part of the Sunset Friends family as a cafe volunteer has been incredibly fulfilling. The
+              camaraderie and shared moments over a cup of tea make every day special."
             </blockquote>
-            <h4 class="testimonial__author">Sam</h4>
+            <div class="testimonial--author flex">
+              <img class="testimonial__img" src="./img/sam.jpg" alt="Photo of Sam, volunteer at Sunset &amp; Friends">
+              <h4 class="testimonial--name">Sam</h4>
+            </div>
           </div>
         </div>
-        <div class="slide slide--3">
-          <div class="testimonial">
-            <h3 class="testimonial__heading">Active living, laughter, and a vibrant community</h3>
+        <div class="slide slide--2 flex flex--column" role="group" aria-roledescription="slide"
+          aria-label="Activities testimonial" aria-labelledby="testimonial__heading--2">
+          <div class="testimonial flex flex--column">
+            <div class="testimonial--heading flex">
+              <i class="icon ph ph-person-simple-run"></i>
+              <h3 class="section__subtitle testimonial__subtitle" id="testimonial__heading--2">Active living and a
+                vibrant community</h3>
+            </div>
             <blockquote class="testimonial__text">
-              I can't speak highly enough of Sunset Friends and all the activities they offer. It helps keep my mind and
-              body active and I particularly enjoy playing walking football. We always have a good laugh.
+              "I can't speak highly enough of Sunset Friends and all the activities they offer. It helps keep my mind
+              and body active and I particularly enjoy playing walking football. We always have a good laugh."
             </blockquote>
-            <h4 class="testimonial__author">John</h4>
+            <div class="testimonial--author flex">
+              <img class="testimonial__img" src="./img/john.jpg" alt="Photo of JOhn, member of Sunset &amp; Friends">
+              <h4 class="testimonial--name">John</h4>
+            </div>
           </div>
         </div>
-        <div class="slide slide--4">
-          <div class="testimonial">
-            <h3 class="testimonial__heading">Bringing the sunshine indoors as a "Sunset Buddy"</h3>
+        <div class="slide slide--3 flex flex--column" role="group" aria-roledescription="slide"
+          aria-label="'Sunset Buddy' testimonial" aria-labelledby="testimonial__heading--3">
+          <div class="testimonial flex flex--column">
+            <div class="testimonial--heading flex">
+              <i class="icon ph ph-sun"></i>
+              <h3 class="section__subtitle testimonial__subtitle" id="testimonial__heading--3">Bringing the sunshine
+                indoors</h3>
+            </div>
             <blockquote class="testimonial__text">
-              As a "Sunset Buddy", I've found immense gratification in brightening the days of those who can't join in
-              person. Bringing the spirit of Sunset Friends to homes has created heartwarming connections and
-              friendships I will treasure forever.
+              "As a 'Sunset Buddy', I've found immense gratification in brightening the days of those who can't join in
+              person. Bringing the spirit of Sunset Friends and visiting their homes has created heartwarming
+              connections and friendships I will treasure forever."
             </blockquote>
-            <h4 class="testimonial__author">Sarah</h4>
+            <div class="testimonial--author flex">
+              <img class="testimonial__img" src="./img/sarah.jpg"
+                alt="Photo of Sarah, volunteer at Sunset &amp; Friends">
+              <h4 class="testimonial--name">Sarah</h4>
+            </div>
           </div>
         </div>
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
+        <div class="slide slide--4 flex flex--column" role="group" aria-roledescription="slide"
+          aria-label="Making friends testimonial" aria-labelledby="testimonial__heading--4">
+          <div class="testimonial flex flex--column">
+            <div class="testimonial--heading flex">
+              <i class="icon ph ph-smiley"></i>
+              <h3 class="section__subtitle testimonial__subtitle" id="testimonial__heading--4">Making lifelong
+                connections
+              </h3>
+            </div>
+            <blockquote class="testimonial__text">
+              "Sunset Friends has been a beacon of warmth for me. I joined looking for companionship and have found
+              beautiful friendships that have added so much joy to my life."
+            </blockquote>
+            <div class="testimonial--author flex">
+              <img class="testimonial__img" src="./img/falisha.jpg"
+                alt="Photo of Falisha, member of Sunset &amp; Friends">
+              <h4 class="testimonial--name">Falisha</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="container">
-      <p class="section--cta"><a href="./events.html">Come join us!</a></p>
+    <section class="container cta__section margin--large">
+      <a class="cta" href="./events.html">Come join us!</a>
     </section>
   </main>
   <footer class="footer container">
     <div class="secondary-nav">
       <ul class="flex flex--column list-style">
-        <li><a class="secondary-nav__link" href="./about.html">About</a></li>
-        <li><a class="secondary-nav__link" href="./volunteer.html">Volunteer</a></li>
-        <li><a class="secondary-nav__link" href="./contact.html">Contact</a></li>
-        <li><a class="secondary-nav__link" href="./events.html">Events</a></li>
+        <li><a class="secondary-nav__link" href="#">About</a></li>
+        <li><a class="secondary-nav__link" href="#">Volunteer</a></li>
+        <li><a class="secondary-nav__link" href="#">Contact</a></li>
+        <li><a class="secondary-nav__link" href="#">Events</a></li>
       </ul>
       <ul class="flex flex--column list-style">
         <li><a class="secondary-nav__link" href="#">Terms of Use</a></li>
@@ -153,7 +199,7 @@
     </div>
     <div class="newsletter__form">
       <h2 class="newsletter__title">Get information about our upcoming events</h2>
-      <p class="newsletter__text">Stay informed about what Sunshine Friends are up to. TODO: Add some more text.</p>
+      <p class="newsletter__text">Stay informed about what Sunset Friends are up to. TODO: Add some more text.</p>
       <form class="newsletter__form--cta" name="sign-up" netlify>
         <div>
           <label for="name">Name</label>

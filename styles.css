@@ -1,28 +1,32 @@
 /* COLOURS
 - Primary: #f9bb6e
 - Tints: #fef8f1, #fdebd4, #fbd6a8
-- Shades: 
-- Browns: #4b3821
+- Shades: #4b3821
 */
 
-/*******************************/
-/*   COLOUR & SIZE VARIABLES   */
-/*******************************/
+/********************************/
+/*    COLOUR & SIZE VARIABLES   */
+/********************************/
 
 :root {
   --color--primary: #f9bb6e;
   --color--cta: #fbd6a8;
   --color--navLink: #fdebd4;
+  --color--carousel: #fdebd4;
   --color--header: #fef8f1;
   --color--stickyNav: rgba(255, 249, 242, 0.95);
+  --color--mobileNav: rgba(255, 255, 255, 0.9);
+  --color--white: #fff;
   --color--shadow: rgba(74, 56, 33, 0.075);
   --color--text: #4b3821;
 
   --border--radius: 1rem;
   --margin--whiteSpace: 2rem;
+  --margin--whiteSpaceLarge: 4rem;
   --margin--navLinks: 0.5rem;
   --padding--container: calc(4vw / 2);
   --padding: 16px;
+  --padding--large: 110px;
 
   --16px: 1rem;
   --18px: 1.125rem;
@@ -38,9 +42,9 @@
   --font-weight--bold: 700;
 }
 
-/*******************************/
-/*            RESET            */
-/*******************************/
+/********************************/
+/*             RESET            */
+/********************************/
 
 html {
   box-sizing: border-box;
@@ -59,9 +63,16 @@ html {
   box-shadow: 0 0 0 2px var(--color--primary);
 }
 
-/*******************************/
-/*     REUSABLE COMPONENTS     */
-/*******************************/
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+}
+
+/********************************/
+/*      REUSABLE COMPONENTS     */
+/********************************/
 
 .container {
   margin: 0 auto var(--margin--whiteSpace);
@@ -92,9 +103,13 @@ html {
   list-style: none;
 }
 
-/*******************************/
-/*           GENERAL           */
-/*******************************/
+.margin--large {
+  margin-bottom: var(--margin--whiteSpaceLarge);
+}
+
+/********************************/
+/*            GENERAL           */
+/********************************/
 
 body {
   font-family: sans-serif;
@@ -106,12 +121,7 @@ body {
 
 img {
   border-radius: var(--border--radius);
-  max-width: var(--max-width);
   width: 100%;
-}
-
-.section {
-  margin-bottom: var(--margin--whiteSpace);
 }
 
 .section__title {
@@ -125,13 +135,12 @@ img {
 
 .icon {
   color: var(--color--primary);
-  font-size: 40px;
-  /* font-size: var(--52px); */
+  font-size: var(--36px);
 }
 
-/*******************************/
-/*        HEADER SECTION       */
-/*******************************/
+/********************************/
+/*         HEADER SECTION       */
+/********************************/
 
 /* Required for sticky navigation */
 .header.sticky {
@@ -200,9 +209,9 @@ img {
   font-size: var(--24px);
 }
 
-/*******************************/
-/*     NAVIGATION & LINKS      */
-/*******************************/
+/********************************/
+/*      NAVIGATION & LINKS      */
+/********************************/
 
 .main-nav__links {
   gap: var(--margin--navLinks);
@@ -210,8 +219,8 @@ img {
 
 .main-nav__link:link,
 .main-nav__link:visited,
-.hero--cta:link,
-.hero--cta:visited,
+.cta:link,
+.cta:visited,
 .hero--learn-more:link,
 .hero--learn-more:visited {
   display: inline-block;
@@ -229,8 +238,8 @@ img {
 
 .main-nav--cta:link,
 .main-nav--cta:visited,
-.hero--cta:link,
-.hero--cta:visited {
+.cta:link,
+.cta:visited {
   background-color: var(--color--cta);
 }
 
@@ -244,8 +253,8 @@ img {
 
 .main-nav__link.main-nav--cta:hover,
 .main-nav__link.main-nav--cta:active,
-.hero--cta:hover,
-.hero--cta:active {
+.cta:hover,
+.cta:active {
   background-color: var(--color--primary);
 }
 
@@ -253,9 +262,9 @@ img {
   margin-right: var(--margin--navLinks);
 }
 
-/*******************************/
-/*      MOBILE NAVIGATION      */
-/*******************************/
+/********************************/
+/*       MOBILE NAVIGATION      */
+/********************************/
 
 .mobile-nav__btn {
   display: none;
@@ -271,13 +280,13 @@ img {
   display: none;
 }
 
-/*******************************/
-/*        HERO SECTION         */
-/*******************************/
+/********************************/
+/*         HERO SECTION         */
+/********************************/
 
 .hero__section {
   background-color: var(--color--header);
-  padding-bottom: 100px;
+  padding-bottom: var(--padding--large);
 }
 
 .hero__section--info {
@@ -312,21 +321,14 @@ img {
   }
 }
 
-/*******************************/
-/*       FEATURE SECTION       */
-/*******************************/
+/********************************/
+/*        FEATURE SECTION       */
+/********************************/
 
 .local__section {
-  width: 40%;
+  width: 40vw;
   text-align: center;
   font-size: var(--24px);
-  padding: var(--24px) 0;
-}
-
-#what-we-do {
-}
-
-.features__section {
 }
 
 .feature--group {
@@ -360,21 +362,137 @@ img {
   line-height: 1.2;
 }
 
-/*******************************/
-/*     TESTIMONIAL SECTION     */
-/*******************************/
+/********************************/
+/* TESTIMONIAL CAROUSEL SECTION */
+/********************************/
 
-/*******************************/
-/*         CTA SECTION         */
-/*******************************/
+.testimonials__title {
+  font-size: var(--24px);
+  text-align: center;
+}
 
-/*******************************/
-/*        FOOTER SECTION       */
-/*******************************/
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 70vw;
+  /* POSSIBLY CHANGE HEIGHT */
+  height: 300px;
+  margin: 0 auto;
+  background-color: var(--color--carousel);
+  border-radius: var(--border--radius);
+  box-shadow: 0 24px 48px var(--color--shadow);
+}
 
-/*******************************/
-/*    SMALLER SCREEN SIZES     */
-/*******************************/
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* POSSIBLY CHANGE HEIGHT */
+  height: 300px;
+  transition: transform 1s;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  border: none;
+  background: var(--color--white);
+  border-radius: 50%;
+  min-width: 44px;
+  min-height: 44px;
+  height: var(--44px);
+  width: var(--44px);
+  cursor: pointer;
+  box-shadow: 0 24px 48px var(--color--shadow);
+}
+
+.carousel__btn:hover,
+.carousel__btn:focus {
+  border: 2px solid var(--color--primary);
+}
+
+.carousel__btn--left {
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel__btn--right {
+  right: 5%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dots__dot {
+  border: 2px solid var(--color--primary);
+  background-color: var(--color--white);
+  opacity: 0.7;
+  min-width: 16px;
+  min-height: 16px;
+  height: var(--16px);
+  width: var(--16px);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.dots__dot--active {
+  background-color: var(--color--primary);
+  opacity: 1;
+}
+
+.testimonial {
+  width: 75%;
+}
+
+.testimonial--heading,
+.testimonial--author {
+  align-self: flex-start;
+}
+
+.testimonial__subtitle {
+  text-transform: uppercase;
+  font-size: var(--24px);
+  align-self: center;
+}
+
+.testimonial__text {
+  font-size: var(--18px);
+  line-height: 1.2;
+}
+
+.testimonial__img {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+}
+
+.testimonial--name {
+  font-size: var(--18px);
+}
+
+/********************************/
+/*          CTA SECTION         */
+/********************************/
+
+.cta__section {
+  text-align: center;
+}
+
+/********************************/
+/*         FOOTER SECTION       */
+/********************************/
+
+/********************************/
+/*     SMALLER SCREEN SIZES     */
+/********************************/
 
 /* Change width dimensions as appropriate when editing for smaller screens */
 @media (max-width: 59em) {
@@ -389,7 +507,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--color--mobileNav);
     /* Safari only supports backdrop-filter by webkit */
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);

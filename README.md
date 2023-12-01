@@ -40,20 +40,22 @@ Mobile:
 - Created the CSS for the colour scheme and font/space sizing (used custom properties to contain them).
 - Created the CSS layout using flexbox and grid.
 - Rather than setting `max-width` to the container as I wanted the background colour to go across the whole width I added padding to give the content a maximum-width of 96vw by using the variable `--padding--container: calc(4vw / 2);`.
-- Gave the `main__nav--cta` and `section--cta` (events page links) a different look to make the links stand out.
+- Gave the `main-nav--cta`, `hero--cta` and `cta` (events page links) a different look to make the links stand out.
 - Added an animation on the logo using CSS `@keyframes` with `transform: scale` to produce a zoom-in-out effect on mouse hover.
 - Added an animation on the hero image using CSS `@keyframes` with `transform: translateX` to make the hero image move in from the right on page load.
 - Edited `:focus` to match styling of links for keyboard only users (for logo made `:focus` to be a circle shape)
 - Added JavaScript to enable the following functionality:
   - Set current year in copyright statement.
   - Added smooth scrolling for "Learn more ↓" page link.
-  - Added sticky navigation for larger screens TODO: might need to change `window.innderWidth` setting
-  - Added mobile navigation menu TODO: adjust look of menu
+  - Added sticky navigation for larger screens. TODO: might need to change `window.innderWidth` setting
+  - Added mobile navigation menu. TODO: adjust look of menu
+  - Added carousel for testimonials.
+- Added accessibility aria labels for the carousel section: `role`, `aria-roledescription`, `arial-label`, `aria-labelledby`.
 
 TODO
 
-- carousel for testimonials (js)
 - add media queries to make site fully responsive
+- refactor CSS
 
 ### Built with
 
@@ -68,7 +70,7 @@ TODO
   - Mobile navigation
   - Smooth scrolling
   - Sticky navigation
-- SVG Icons
+- Icons
 
 ### What I learned
 
@@ -84,8 +86,13 @@ To improve my JavaScript knowledge and capabilities by completing [The Complete 
 
 ### Useful resources
 
-- [Phosphor Icons](https://phosphoricons.com/) - Free, open source icon library.
 - [Tint & Shade Generator](https://maketintsandshades.com/) - Free tool that calculates tints and shades for your default colour, to enable you to create a cohesive colour scheme.
+- [Coolers Colour Contrast Checker](https://coolors.co/contrast-checker/112a46-acc8e5) - Free tool that allows you to check the colour contrast of the text to background colour for accessibility / readability purposes.
+- [Phosphor Icons](https://phosphoricons.com/) - Free, open source icon library.
+- [Pexels Photos](https://www.pexels.com/) - Free stock royalty free photos and images.
+- [Unsplash Photos](https://unsplash.com/) - Free stock royalty free photos and images.
+- [Squoosh App](https://squoosh.app/) - Free tool that reduces image sizes.
+- [A Step-By-Step Guide To Building Accessible Carousels](https://www.smashingmagazine.com/2023/02/guide-building-accessible-carousels/) - Article by Sonja Weckenmann - a step-by-step guide looking at how to add accessibility into carousel component.
 - [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) - A paid for JavaScript course on Udemy.
 
 ## Author
